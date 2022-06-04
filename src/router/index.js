@@ -22,12 +22,12 @@ const routes = [
     component: () => import('../views/Pratice/ProjectOne'),
   },
   {
-    path: '/project-2',
+    path: '/counter',
     name: 'ProjectTwo',
     component: () => import('../views/Pratice/ProjectTwo'),
   },
   {
-    path: '/project-3',
+    path: '/search',
     name: 'ProjectThree',
     component: () => import('../views/Pratice/ProjectThree'),
   },

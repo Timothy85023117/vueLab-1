@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="list">
-      <router-link :to="{ name: 'ProjectOne' }">project-1</router-link>
-      <router-link :to="{ name: 'ProjectTwo' }">project-2</router-link>
-      <router-link :to="{ name: 'ProjectThree' }">project-3</router-link>
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'ProjectTwo' }">Counter</router-link>
+      <router-link :to="{ name: 'ProjectThree' }">Search</router-link>
       <router-link :to="{ name: 'ProjectFour' }">project-4</router-link>
       <router-link :to="{ name: 'ProjectFive' }">project-5</router-link>
       <router-link :to="{ name: 'ProjectSix' }">project-6</router-link>

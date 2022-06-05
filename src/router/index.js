@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+// import Pratice from './pratice'
 const routes = [
   {
     path: '/',
@@ -7,74 +7,74 @@ const routes = [
     component: () => import('../views/Home/HomeView'),
   },
   {
-    path: '/About',
+    path: '/about',
     name: 'About',
     component: () => import('../views/About/AboutView'),
   },
   {
-    path: '/Partice',
-    name: 'Menu',
-    component: () => import('../views/Pratice/Menu'),
+    path: '/pratice',
+    name: 'PraticeView',
+    component: () => import('@/components/praticies/Menu'),
   },
   {
-    path: '/project-1',
+    path: '/pratice/project-1',
     name: 'ProjectOne',
-    component: () => import('../views/Pratice/ProjectOne'),
+    component: () => import('@/components/praticies/ProjectOne'),
   },
   {
-    path: '/counter',
+    path: '/pratice/counter',
     name: 'ProjectTwo',
-    component: () => import('../views/Pratice/ProjectTwo'),
+    component: () => import('@/components/praticies/ProjectTwo'),
   },
   {
-    path: '/search',
+    path: '/pratice/search',
     name: 'ProjectThree',
-    component: () => import('../views/Pratice/ProjectThree'),
+    component: () => import('@/components/praticies/ProjectThree'),
   },
   {
-    path: '/project-4',
+    path: '/pratice/project-4',
     name: 'ProjectFour',
-    component: () => import('../views/Pratice/ProjectFour'),
+    component: () => import('@/components/praticies/ProjectFour'),
   },
   {
-    path: '/project-5',
+    path: '/pratice/project-5',
     name: 'ProjectFive',
-    component: () => import('../views/Pratice/ProjectFive'),
+    component: () => import('@/components/praticies/ProjectFive'),
   },
   {
-    path: '/project-6',
+    path: '/pratice/project-6',
     name: 'ProjectSix',
-    component: () => import('../views/Pratice/ProjectSix'),
+    component: () => import('@/components/praticies/ProjectSix'),
   },
   {
-    path: '/project-7',
+    path: '/pratice/project-7',
     name: 'ProjectSeven',
-    component: () => import('../views/Pratice/ProjectSeven'),
+    component: () => import('@/components/praticies/ProjectSeven'),
   },
   {
-    path: '/project-8',
+    path: '/pratice/project-8',
     name: 'ProjectEight',
-    component: () => import('../views/Pratice/ProjectEight'),
+    component: () => import('@/components/praticies/ProjectEight'),
   },
   {
-    path: '/project-9',
+    path: '/pratice/project-9',
     name: 'ProjectNine',
-    component: () => import('../views/Pratice/ProjectNine'),
+    component: () => import('@/components/praticies/ProjectNine'),
   },
   {
-    path: '/project-10',
+    path: '/pratice/project-10',
     name: 'ProjectTen',
-    component: () => import('../views/Pratice/ProjectTen'),
+    component: () => import('@/components/praticies/ProjectTen'),
   },
   {
-    path: '/project-11',
+    path: '/pratice/project-11',
     name: 'ProjectEleven',
-    component: () => import('../views/Pratice/ProjectEleven'),
+    component: () => import('@/components/praticies/ProjectEleven'),
   },
   {
-    path: '/project-12',
+    path: '/pratice/project-12',
     name: 'ProjectTwelve',
-    component: () => import('../views/Pratice/ProjectTwelve'),
+    component: () => import('@/components/praticies/ProjectTwelve'),
   },
 ]
 

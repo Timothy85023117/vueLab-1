@@ -1,9 +1,10 @@
 <template>
   <div>
+    <h4>練習項目清單</h4>
     <div class="list">
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'ProjectTwo' }">Counter</router-link>
-      <router-link :to="{ name: 'ProjectThree' }">Search</router-link>
+      <router-link :to="{ path: '/pratice/counter' }">Counter</router-link>
+      <router-link :to="{ path: '/pratice/search' }">Search</router-link>
       <router-link :to="{ name: 'ProjectFour' }">project-4</router-link>
       <router-link :to="{ name: 'ProjectFive' }">project-5</router-link>
       <router-link :to="{ name: 'ProjectSix' }">project-6</router-link>
@@ -24,6 +25,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h4{
+  display: flex;
+  justify-content: center;
+}
 .list{
   display: grid;
   width: 60%;

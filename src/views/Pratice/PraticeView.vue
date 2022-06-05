@@ -1,12 +1,10 @@
 <template>
-  <div class="ProjectThree">
-    <h1>ProjectThree</h1>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
 export default {
-  name: "ProjectThree",
+  name: "PraticeView",
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

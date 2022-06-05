@@ -2,11 +2,19 @@
   <nav>
     <router-link :to="{name:'Home'}">Home</router-link> |
     <router-link :to="{name:'About'}">About</router-link> |
-    <router-link :to="{name:'Menu'}">Practice</router-link>
+    <router-link :to="{name:'PraticeView'}">Practice</router-link>
   </nav>
-  <router-view/>
+  <routerViewContent/>
 </template>
 
+<script>
+import routerViewContent from "./views/index.vue"
+export default {
+  components:{
+    routerViewContent
+  }
+}
+</script>
 <style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,12 +23,11 @@
   text-align: center;
   color: #2c3e50;
 }
-
 nav {
   display: flex;
   justify-content: center;
   padding: 30px;
-  background: #ccc;
+  background: #eee;
   a {
     font-weight: bold;
     color: #2c3e50;

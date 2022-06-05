@@ -1,8 +1,7 @@
-### ※項目 3. 建立一個清單搜尋頁面，會依照輸入的關鍵字(不分大小寫)即時過濾畫面顯示的清單，並顯示目前清單筆數，可透過 Practice 頁面上練習項目清單的 Search 連結開啟該頁。 ###
-1. 建立一個 Search 頁面。
-2. 預設清單資料為一個字串陣列有12筆資料，資料如下
-['Ada','Aaliyah','Adela','Basia','Bonnie','Brook','Candice','Celeste','Cheryl','Ella','Eudora','Gemma']
-3. 預設關鍵字輸入欄位值為空，畫面會顯示所有清單資料，並且顯示目前清單筆數。
-4. 當使用者在關鍵字欄位輸入資料後，會依照輸入的關鍵字即時過瀘畫面顯示的清單，畫面上顯示的清單資料筆數也要跟著更新，比對規則不分大小寫。
-5. Search 頁面路由名稱為"search"，網址路徑為"/search"。
-6. 在 Practice 頁面上的練習項目清單，加上 Search 連結，連結文字為"Search"，點擊後會轉至 Search 頁面。
+### ※項目 4. 建立一個能把數字轉為有千分位的字串且保留小數位數的 filter，並在頁面展示 filter 的功能。###
+1. 新建一個 filter 功能，參照目前專案的構結檔案應放置在 /src/utils/filters 下，filter 名稱為"commafy"，作法可參考 filters 內的 demo.js。
+2. 此 filter 可將數字轉為有千分位的字串且保留小數位數，例如將 10000.00 轉為 10,000.00、1000 轉為 1,000。
+3. 此 filter function 需加上 JSDoc 註解。
+4. 建立一個 FilterDemo 頁面，展示 commafy filter 功能是否符合需求。
+5. FilterDemo 頁面的路由名稱為"filterDemo"，網址路徑為"/filterDemo"。
+6. 在 Practice 頁面上的練習項目清單，加上 FilterDemo 連結，連結文字為"Filter Demo"，點擊後會轉至 FilterDemo 頁面。

@@ -1,19 +1,22 @@
 <template>
-  <nav>
-    <router-link :to="{name:'Home'}">Home</router-link> |
-    <router-link :to="{name:'About'}">About</router-link> |
-    <router-link :to="{name:'Pratice'}">Practice</router-link>
-  </nav>
-  <routerViewContent/>
+  <Menu :Menu="Menu"/>
+  <routerViewContent />
 </template>
 
 <script>
-import routerViewContent from "./views/index.vue"
+import routerViewContent from "./views/index.vue";
+import Menu from "@/components/praticies/Menu.vue";
 export default {
-  components:{
-    routerViewContent
+  components: {
+    routerViewContent,
+    Menu,
+  },
+  data(){
+    return{
+      Menu:['Home','About','Pratice']
+    }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 #app {
@@ -23,17 +26,5 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-nav {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  background: #eee;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+
 </style>

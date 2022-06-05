@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: '/pratice',
-    name: 'PraticeView',
-    component: () => import('@/components/praticies/Menu'),
+    name: 'Pratice',
+    component: () => import('@/components/praticies/Practice'),
   },
   {
     path: '/pratice/project-1',
@@ -32,12 +32,12 @@ const routes = [
     component: () => import('@/components/praticies/ProjectThree'),
   },
   {
-    path: '/pratice/project-4',
+    path: '/pratice/filterDemo',
     name: 'ProjectFour',
     component: () => import('@/components/praticies/ProjectFour'),
   },
   {
-    path: '/pratice/project-5',
+    path: '/pratice/listDemo',
     name: 'ProjectFive',
     component: () => import('@/components/praticies/ProjectFive'),
   },

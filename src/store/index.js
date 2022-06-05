@@ -4,7 +4,8 @@ export default createStore({
     state() {
         return {
             count: 0,
-            projectThree:['Ada','Aaliyah','Adela','Basia','Bonnie','Brook','Candice','Celeste','Cheryl','Ella','Eudora','Gemma']
+            projectThree:['Ada','Aaliyah','Adela','Basia','Bonnie','Brook','Candice','Celeste','Cheryl','Ella','Eudora','Gemma'],
+            projectFive:['AAA','BBB','CCC','DDD']
         }
     },
     getters: {

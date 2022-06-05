@@ -1,12 +1,13 @@
 <template>
   <div>
     <div class="ProjectTwo">
+      <h1>Count</h1>
       <div class="row-1">
-        <p>Count 數字為 {{ count }}</p>
+        <p>Count : {{ count }}</p>
       </div>
       <div class="row-2">
-        <button @click="clickImp(-1)">decrease 1</button>
-        <button @click="clickImp(1)">increment 1</button>
+        <button @click="clickImp(-1)">減 1</button>
+        <button @click="clickImp(1)">加 1</button>
       </div>
     </div>
   </div>

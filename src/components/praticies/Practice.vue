@@ -5,8 +5,8 @@
       <router-link :to="{ name: 'Home' }">Home</router-link>
       <router-link :to="{ path: '/pratice/counter' }">Counter</router-link>
       <router-link :to="{ path: '/pratice/search' }">Search</router-link>
-      <router-link :to="{ name: 'ProjectFour' }">project-4</router-link>
-      <router-link :to="{ name: 'ProjectFive' }">project-5</router-link>
+      <router-link :to="{ name: 'ProjectFour' }">Filter Demo</router-link>
+      <router-link :to="{ name: 'ProjectFive' }">listDemo</router-link>
       <router-link :to="{ name: 'ProjectSix' }">project-6</router-link>
       <router-link :to="{ name: 'ProjectSeven' }">project-7</router-link>
       <router-link :to="{ name: 'ProjectEight' }">project-8</router-link>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "Menu",
+  name: "Pratice",
 };
 </script>
 
@@ -33,7 +33,7 @@ h4{
   display: grid;
   width: 60%;
   margin: 20px auto;
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
   a{
     padding: 15px;
     text-decoration: none;

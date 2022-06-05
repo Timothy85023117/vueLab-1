@@ -1,7 +1,7 @@
-### ※項目 4. 建立一個能把數字轉為有千分位的字串且保留小數位數的 filter，並在頁面展示 filter 的功能。###
-1. 新建一個 filter 功能，參照目前專案的構結檔案應放置在 /src/utils/filters 下，filter 名稱為"commafy"，作法可參考 filters 內的 demo.js。
-2. 此 filter 可將數字轉為有千分位的字串且保留小數位數，例如將 10000.00 轉為 10,000.00、1000 轉為 1,000。
-3. 此 filter function 需加上 JSDoc 註解。
-4. 建立一個 FilterDemo 頁面，展示 commafy filter 功能是否符合需求。
-5. FilterDemo 頁面的路由名稱為"filterDemo"，網址路徑為"/filterDemo"。
-6. 在 Practice 頁面上的練習項目清單，加上 FilterDemo 連結，連結文字為"Filter Demo"，點擊後會轉至 FilterDemo 頁面。
+### ※項目 5. 建立一個 List component，可傳入字串陣列資料，點擊項目時會觸發一個自訂事件 clickitem 傳入該項目的資料內容與 index。並且在頁面展示組件的功能。###
+1. 建立一個組件名稱為 List。
+2. 組件必須要有 data 屬性 只能傳入字串陣列資料，如果沒有資料此組件會自動不顯示。
+3. 組件項目被 click 時會觸發自訂事件 clickitem 並傳入該項目的資料內容與index。
+4. 建立一個 ListDemo 頁面，展示此組件的功能是否符合需求。
+5. ListDemo 頁面的路由名稱為"listDemo"，網址路徑為"/listDemo"。
+6. 在 Practice 頁面上的練習項目清單，加上 ListDemo 連結，連結文字為"List Demo"，點擊後會轉至 ListDemo 頁面。

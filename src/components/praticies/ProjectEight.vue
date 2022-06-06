@@ -3,68 +3,75 @@
     <h1>Register</h1>
     <form>
       <div class="input_wrap">
-        <label for="register_id">身分證字號</label>
+        <label for="register_id">
+          <span class="wait" :class="{checked:registerFinally.id}"></span>身分證字號
+        </label>
         <input
           id="register_id"
           type="text"
           maxlength="10"
-          placeholder=""
+          placeholder
           v-model="inputValue.id"
           ref="id"
           @blur="checkId"
         />
         <span ref="ruleCode_id"></span>
-        <span class="wait" :class="{checked:registerFinally.id}"></span>
       </div>
       <div class="input_wrap">
-        <label for="register_name">姓名</label>
+        <label for="register_name">
+          <span class="wait" :class="{checked:registerFinally.name}"></span>姓名
+        </label>
         <input
           id="register_name"
           type="text"
-          placeholder=""
+          placeholder
           v-model="inputValue.name"
           ref="name"
           @blur="checkName"
         />
         <span ref="ruleCode_name"></span>
-        <span class="wait" :class="{checked:registerFinally.name}"></span>
+      </div>
+      <div class="input_wrap input_gender" ref="gender">
+        <p>性別</p>
+        <div class="radio_wrap">
+          <input
+            type="radio"
+            id="male"
+            value="1"
+            v-model="inputValue.gender"
+            name="gender"
+            @blur="checkGender"
+          />
+          <label for="male">男</label>
+
+          <input
+            type="radio"
+            id="female"
+            value="2"
+            v-model="inputValue.gender"
+            name="gender"
+            @blur="checkGender"
+          />
+          <label for="female">女</label>
+          <span class="wait" :class="{checked:registerFinally.gender}"></span>
+        </div>
       </div>
       <div class="input_wrap">
-        <label for="register_phoneNum">手機號碼</label>
+        <label for="register_phoneNum">
+          <span class="wait" :class="{checked:registerFinally.phoneNum}"></span>手機號碼
+        </label>
         <input
           id="register_phoneNum"
           type="text"
           maxlength="10"
-          placeholder=""
+          placeholder
           v-model="inputValue.phoneNum"
           ref="phoneNum"
           @blur="checkPhoneNum"
         />
         <span ref="ruleCode_phone"></span>
-        <span class="wait" :class="{checked:registerFinally.phoneNum}"></span>
       </div>
-      <div class="input_wrap" ref="gender">
-        <label for="male">男</label>
-        <input
-          type="radio"
-          id="male"
-          value="1"
-          v-model="inputValue.gender"
-          name="gender"
-          @blur="checkGender"
-        />
-        <label for="female">女</label>
-        <input
-          type="radio"
-          id="female"
-          value="2"
-          v-model="inputValue.gender"
-          name="gender"
-          @blur="checkGender"
-        />
-        <span ref="ruleCode_gender"></span>
-        <span class="wait" :class="{checked:registerFinally.gender}"></span>
-      </div>
+
       <div class="input_wrap">
         <div class="btn" @click="registerAccount">送出</div>
         <div class="btn" @click="clearForm">清除</div>
@@ -113,7 +120,7 @@ export default {
       // 驗證REG
       regRule: {
         mobileReg: { reg0: /^(09+\d{8})$/ },
-        IdReg: { reg0: /[A-Za-z]{1}[1-2]{2}[0-9]{7}/ },
+        IdReg: { reg0: /[A-Za-z]{1}[1-2]{1}[0-9]{8}/ },
         nameReg: { reg0: /\w{30}/ }
       },
       verifyTrigger: false
@@ -209,7 +216,9 @@ export default {
           return;
         }
       }
-      alert(`恭喜註冊成功 ! 身分證: ${vm.inputValue.id} ,姓名 :${vm.inputValue.name},性別 :${vm.inputValue.gender},手機號碼 :${vm.inputValue.phoneNum}`);
+      alert(
+        `恭喜註冊成功 ! 身分證: ${vm.inputValue.id} ,姓名 :${vm.inputValue.name},性別 :${vm.inputValue.gender},手機號碼 :${vm.inputValue.phoneNum}`
+      );
     },
     // 清除所有欄位
     clearForm() {
@@ -230,30 +239,35 @@ export default {
 </script>
 <style scoped lang="scss">
 .ProjectEight {
+  h1{
+    text-align: center;
+  }
   form {
-    background: #eee;
-    width: 90%;
-    padding: 24px;
+    width: 800px;
     margin: 0 auto;
+    background: #eee;
+    padding: 20px;
     .input_wrap {
-      position: relative;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       label {
+        position: relative;
+        padding-left: 20px;
+        padding-right: 10px;
+        text-align: right;
         flex: 1;
       }
       input {
-        flex: 5;
-        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 3px;
-        width: 100%;
-        box-sizing: border-box;
-        color: #2c3e50;
-        font-size: 13px;
+        border-radius: 4px;
+        line-height: 1.5;
+        flex: 5;
       }
       span {
-        display: block;
+        flex-basis: 100%;
+        margin-left: 20%;
         height: 12px;
         font-size: 12px;
         color: red;
@@ -261,15 +275,12 @@ export default {
           color: green;
         }
       }
-
       span.wait {
         position: absolute;
       }
       span.checked {
         position: absolute;
-        top: 50%;
-        right: 8px;
-        transform: translateY(-50%);
+        left: 0;
         font-size: 20px;
         line-height: 20px;
         width: 40px;
@@ -279,11 +290,32 @@ export default {
         }
       }
     }
-    .btn{
+    .input_gender {
+      position: relative;
+      display: flex;
+      span{
+        margin-left: -20%;
+      }
+      p {
+        padding-left: 20px;
+        padding-right: 10px;
+        text-align: right;
+        margin: 0;
+        flex: 1;
+      }
+      .radio_wrap {
+        position: relative;
+        flex: 5;
+        label {
+          padding: 0;
+        }
+      }
+    }
+    .btn {
       background-color: #fff;
       padding: 12px;
       border-radius: 4px;
-      &+.btn{
+      & + .btn {
         margin-left: 8px;
       }
     }

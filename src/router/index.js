@@ -47,7 +47,7 @@ const routes = [
     component: () => import('@/components/praticies/ProjectSix'),
   },
   {
-    path: '/pratice/project-7',
+    path: '/pratice/modalDemo',
     name: 'ProjectSeven',
     component: () => import('@/components/praticies/ProjectSeven'),
   },

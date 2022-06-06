@@ -3,12 +3,12 @@
     <h4>練習項目清單</h4>
     <div class="list">
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ path: '/pratice/counter' }">Counter</router-link>
-      <router-link :to="{ path: '/pratice/search' }">Search</router-link>
+      <router-link :to="{ name: 'ProjectTwo' }">Counter</router-link>
+      <router-link :to="{ name: 'ProjectThree' }">Search</router-link>
       <router-link :to="{ name: 'ProjectFour' }">Filter Demo</router-link>
       <router-link :to="{ name: 'ProjectFive' }">listDemo</router-link>
       <router-link :to="{ name: 'ProjectSeven' }">ModalDemo</router-link>
-      <router-link :to="{ name: 'ProjectEight' }">project-8</router-link>
+      <router-link :to="{ name: 'ProjectEight' }">Register</router-link>
       <router-link :to="{ name: 'ProjectNine' }">project-9</router-link>
       <router-link :to="{ name: 'ProjectTen' }">project-10</router-link>
       <router-link :to="{ name: 'ProjectEleven' }">project-11</router-link>

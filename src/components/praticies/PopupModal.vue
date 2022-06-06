@@ -9,7 +9,7 @@
     <teleport to="#app" v-if="isOpenState">
       <div class="black">
         <div class="container">
-          <H4>Demo Modal</H4>
+          <h4>Demo Modal</h4>
           <hr />
           <!-- 父層級傳入 slot -->
           <div class="inner">
